@@ -12,5 +12,12 @@
     "psr-4": {
       "Phalcon\\Bridge\\Symfony\\Form\\": "src"
     }
+  },
+  "require": {
+    "symfony/form": "^3.2",
+    "symfony/templating": "^3.2",
+    "symfony/framework-bundle": "^3.2",
+    "symfony/translation": "^3.2"
   }
 }
+
