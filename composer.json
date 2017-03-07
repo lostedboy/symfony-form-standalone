@@ -1,5 +1,5 @@
 {
-  "name": "lostedboy/Phalcon-Bridge-Symfony-Form",
+  "name": "lostedboy/phalcon-bridge-symfony-form",
   "homepage": "https://github.com/lostedboy/Phalcon-Bridge-Symfony-Form",
   "authors": [
     {
@@ -13,5 +13,4 @@
       "Phalcon\\Bridge\\Symfony\\Form\\": "src"
     }
   }
-}
 }
