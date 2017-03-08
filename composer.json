@@ -10,7 +10,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "Phalcon\\Bridge\\Symfony\\Form\\": "src"
+      "Phalcon\\Bridge\\Symfony\\Form\\": "/"
     }
   },
   "require": {
