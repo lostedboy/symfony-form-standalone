@@ -7,15 +7,14 @@
 
 namespace Phalcon\Bridge\Symfony\Form\Templating;
 
-use Phalcon\Bridge\Symfony\Form\Translation\DefaultTranslator;
+use Phalcon\Bridge\Symfony\Form\Translation\TranslatorInterface;
 use Symfony\Component\Templating\PhpEngine;
 use Symfony\Component\Templating\Loader\FilesystemLoader;
-use Phalcon\Bridge\Symfony\Form\Templating\Helper\FormHelper;
-use Phalcon\Bridge\Symfony\Form\Templating\Helper\TranslatorHelper;
-use Symfony\Component\Translation\Loader\XliffFileLoader;
-use Symfony\Component\Translation\Translator;
 use Symfony\Component\Form\Extension\Templating\TemplatingRendererEngine;
 use Symfony\Component\Form\FormRenderer;
+use Phalcon\Bridge\Symfony\Form\Templating\Helper\FormHelper;
+use Phalcon\Bridge\Symfony\Form\Templating\Helper\TranslatorHelper;
+use Phalcon\Bridge\Symfony\Form\Translation\DefaultTranslator;
 
 /**
  * Class FromTemplating
@@ -50,12 +49,12 @@ class FormTemplating
      * FormTemplating constructor.
      * @param array $loadPaths
      * @param array $themePaths
-     * @param $translator
+     * @param TranslatorInterface $translator
      */
     public function __construct(
         array $loadPaths = [],
         array $themePaths = [],
-        $translator = null
+        TranslatorInterface $translator = null
     ) {
         $this->themePaths = array_merge($this->themePaths, $themePaths);
         $this->loadPaths = array_merge($this->loadPaths, $loadPaths);
