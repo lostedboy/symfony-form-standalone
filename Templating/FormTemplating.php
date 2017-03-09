@@ -7,6 +7,7 @@
 
 namespace Phalcon\Bridge\Symfony\Form\Templating;
 
+use Phalcon\Bridge\Symfony\Form\Translation\DefaultTranslator;
 use Symfony\Component\Templating\PhpEngine;
 use Symfony\Component\Templating\Loader\FilesystemLoader;
 use Phalcon\Bridge\Symfony\Form\Templating\Helper\FormHelper;
@@ -43,18 +44,24 @@ class FormTemplating
      */
     protected $templating;
 
+    protected $translator;
+
     /**
      * FormTemplating constructor.
      * @param array $loadPaths
      * @param array $themePaths
-     * @param string $defaultLanguage
+     * @param $translator
      */
-    public function __construct(array $loadPaths = [], array $themePaths = [], $defaultLanguage = 'en')
-    {
+    public function __construct(
+        array $loadPaths = [],
+        array $themePaths = [],
+        $translator = null
+    ) {
         $this->themePaths = array_merge($this->themePaths, $themePaths);
         $this->loadPaths = array_merge($this->loadPaths, $loadPaths);
 
-        $this->createTranslatorHelper($defaultLanguage);
+        $this->setTranslator($translator);
+        $this->createTranslatorHelper();
         $this->createTemplating();
     }
 
@@ -71,16 +78,11 @@ class FormTemplating
     }
 
     /**
-     * @param string $defaultLanguage
      * @return TranslatorHelper
      */
-    protected function createTranslatorHelper($defaultLanguage = 'en')
+    protected function createTranslatorHelper()
     {
-        $translator = new Translator($defaultLanguage);
-        $translator->setFallbackLocales(array($defaultLanguage));
-        $translator->addLoader('xlf', new XliffFileLoader());
-
-        $this->translationHelper = new TranslatorHelper($translator);
+        $this->translationHelper = new TranslatorHelper($this->getTranslator());
     }
 
     /**
@@ -125,5 +127,25 @@ class FormTemplating
     public function getTemplating()
     {
         return $this->templating;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTranslator()
+    {
+        if (!$this->translator) {
+            return new DefaultTranslator();
+        }
+
+        return $this->translator;
+    }
+
+    /**
+     * @param mixed $translator
+     */
+    public function setTranslator($translator)
+    {
+        $this->translator = $translator;
     }
 }

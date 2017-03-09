@@ -17,7 +17,7 @@ class FormBuilder
     /**
      * @param $className
      * @param null $data
-     * @return AbstractType
+     * @return \Symfony\Component\Form\FormInterface
      */
     public function create($className, $data = null)
     {

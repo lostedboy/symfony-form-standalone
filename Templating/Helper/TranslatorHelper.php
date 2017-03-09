@@ -12,7 +12,7 @@
 namespace Phalcon\Bridge\Symfony\Form\Templating\Helper;
 
 use Symfony\Component\Templating\Helper\Helper;
-use Symfony\Component\Translation\TranslatorInterface;
+use Phalcon\Bridge\Symfony\Form\Translation\TranslatorInterface;
 
 /**
  * TranslatorHelper.
@@ -21,6 +21,9 @@ use Symfony\Component\Translation\TranslatorInterface;
  */
 class TranslatorHelper extends Helper
 {
+    /**
+     * @var TranslatorInterface
+     */
     protected $translator;
 
     /**
