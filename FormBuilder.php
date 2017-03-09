@@ -7,6 +7,7 @@
 namespace Phalcon\Bridge\Symfony\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\FormExtensionInterface;
 use Symfony\Component\Form\Forms;
 
 /**
@@ -14,6 +15,11 @@ use Symfony\Component\Form\Forms;
  */
 class FormBuilder
 {
+    /**
+     * @var \Symfony\Component\Form\FormFactoryBuilderInterface
+     */
+    protected $formFactoryBuilder;
+
     /**
      * @param $className
      * @param null $data
@@ -37,6 +43,21 @@ class FormBuilder
      */
     public function getFormFactoryBuilder()
     {
-        return Forms::createFormFactoryBuilder();
+        if (!$this->formFactoryBuilder) {
+            $this->formFactoryBuilder = Forms::createFormFactoryBuilder();
+        }
+
+        return $this->formFactoryBuilder;
+    }
+
+    /**
+     * @param FormExtensionInterface $extension
+     * @return $this
+     */
+    public function addExtension(FormExtensionInterface $extension)
+    {
+        $this->getFormFactoryBuilder()->addExtension($extension);
+
+        return $this;
     }
 }
