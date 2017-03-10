@@ -1,6 +1,6 @@
 {
-  "name": "lostedboy/phalcon-bridge-symfony-form",
-  "homepage": "https://github.com/lostedboy/Phalcon-Bridge-Symfony-Form",
+  "name": "lostedboy/symfony-form-standalone",
+  "homepage": "https://github.com/lostedboy/symfony-form-standalone",
   "authors": [
     {
       "name": "Alexander Egurtsov",
@@ -10,7 +10,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "Phalcon\\Bridge\\Symfony\\Form\\": "/"
+      "Symfony\\Form\\Standalone\": "/"
     }
   },
   "require": {
