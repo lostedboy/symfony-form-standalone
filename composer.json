@@ -10,7 +10,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "Symfony\\Form\\Standalone\": "/"
+      "Symfony\\Form\\Standalone\\": "/"
     }
   },
   "require": {
