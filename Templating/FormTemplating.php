@@ -1,24 +1,29 @@
 <?php
-/**
- * @author Rocket Internet SE
- * @copyright Copyright (c) 2017 Rocket Internet SE, Charlottenstraße 4, 10969 Berlin, http://www.rocket-internet.de
- * @created 08.03.17, 17:31
+
+/*
+ * This file is part of the SymfonyFormStandalone package.
+ *
+ * (c) Alexander Egurtsov <https://github.com/lostedboy/symfony-form-standalone/>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
-namespace Phalcon\Bridge\Symfony\Form\Templating;
+namespace Symfony\Form\Standalone\Templating;
 
-use Phalcon\Bridge\Symfony\Form\Translation\TranslatorInterface;
 use Symfony\Component\Templating\PhpEngine;
 use Symfony\Component\Templating\Loader\FilesystemLoader;
 use Symfony\Component\Form\Extension\Templating\TemplatingRendererEngine;
 use Symfony\Component\Form\FormRenderer;
-use Phalcon\Bridge\Symfony\Form\Templating\Helper\FormHelper;
-use Phalcon\Bridge\Symfony\Form\Templating\Helper\TranslatorHelper;
-use Phalcon\Bridge\Symfony\Form\Translation\DefaultTranslator;
+use Symfony\Form\Standalone\Templating\Helper\FormHelper;
+use Symfony\Form\Standalone\Templating\Helper\TranslatorHelper;
+use Symfony\Form\Standalone\Translation\DefaultTranslator;
+use Symfony\Form\Standalone\Translation\TranslatorInterface;
 
 /**
- * Class FromTemplating
- * @package Phalcon\Bridge\Symfony\Form\Templating
+ * Class FormTemplating
+ *
+ * @author Alexander Egurtsov <egurtsov@gmail.com>
  */
 class FormTemplating
 {

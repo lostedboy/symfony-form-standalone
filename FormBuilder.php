@@ -1,17 +1,23 @@
 <?php
-/**
- * @author Rocket Internet SE
- * @copyright Copyright (c) 2017 Rocket Internet SE, Charlottenstraße 4, 10969 Berlin, http://www.rocket-internet.de
- * @created 08.03.17, 18:07
- */
-namespace Phalcon\Bridge\Symfony\Form;
 
-use Symfony\Component\Form\AbstractType;
+/*
+ * This file is part of the SymfonyFormStandalone package.
+ *
+ * (c) Alexander Egurtsov <https://github.com/lostedboy/symfony-form-standalone/>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+namespace Symfony\Form\Standalone;
+
 use Symfony\Component\Form\FormExtensionInterface;
 use Symfony\Component\Form\Forms;
 
 /**
- * Class FormBuilder
+ * Class FormTemplating
+ *
+ * @author Alexander Egurtsov <egurtsov@gmail.com>
  */
 class FormBuilder
 {

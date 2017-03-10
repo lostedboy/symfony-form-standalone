@@ -1,23 +1,23 @@
 <?php
 
 /*
- * This file is part of the Symfony package.
+ * This file is part of the SymfonyFormStandalone package.
  *
- * (c) Fabien Potencier <fabien@symfony.com>
+ * (c) Alexander Egurtsov <https://github.com/lostedboy/symfony-form-standalone/>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Phalcon\Bridge\Symfony\Form\Templating\Helper;
+namespace Symfony\Form\Standalone\Templating\Helper;
 
 use Symfony\Component\Templating\Helper\Helper;
-use Phalcon\Bridge\Symfony\Form\Translation\TranslatorInterface;
+use Symfony\Form\Standalone\Translation\TranslatorInterface;
 
 /**
- * TranslatorHelper.
+ * Class FormTemplating
  *
- * @author Fabien Potencier <fabien@symfony.com>
+ * @author Alexander Egurtsov <egurtsov@gmail.com>
  */
 class TranslatorHelper extends Helper
 {

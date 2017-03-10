@@ -1,15 +1,20 @@
 <?php
-/**
- * @author Rocket Internet SE
- * @copyright Copyright (c) 2017 Rocket Internet SE, Charlottenstraße 4, 10969 Berlin, http://www.rocket-internet.de
- * @created 09.03.17, 14:58
+
+/*
+ * This file is part of the SymfonyFormStandalone package.
+ *
+ * (c) Alexander Egurtsov <https://github.com/lostedboy/symfony-form-standalone/>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
-namespace Phalcon\Bridge\Symfony\Form\Translation;
+namespace Symfony\Form\Standalone\Translation;
 
 /**
  * Class DefaultTranslator
- * @package Phalcon\Bridge\Symfony\Form\Translation
+ *
+ * @author Alexander Egurtsov <egurtsov@gmail.com>
  */
 class DefaultTranslator implements TranslatorInterface
 {

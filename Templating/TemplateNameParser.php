@@ -1,11 +1,15 @@
 <?php
-/**
- * @author Rocket Internet SE
- * @copyright Copyright (c) 2017 Rocket Internet SE, Charlottenstraße 4, 10969 Berlin, http://www.rocket-internet.de
- * @created 30.01.17, 14:30
+
+/*
+ * This file is part of the SymfonyFormStandalone package.
+ *
+ * (c) Alexander Egurtsov <https://github.com/lostedboy/symfony-form-standalone/>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
-namespace Phalcon\Bridge\Symfony\Form\Templating;
+namespace Symfony\Form\Standalone\Templating;
 
 use Symfony\Component\Templating\TemplateNameParserInterface;
 use Symfony\Component\Templating\TemplateReference;
@@ -13,7 +17,8 @@ use Symfony\Component\Templating\TemplateReferenceInterface;
 
 /**
  * Class TemplateNameParser
- * @package Intvoy\Common\Form
+ *
+ * @author Alexander Egurtsov <egurtsov@gmail.com>
  */
 class TemplateNameParser implements TemplateNameParserInterface
 {
