@@ -1,13 +1,18 @@
 # Symfony Form Standalone
 
+This library allows to use [symfony forms](http://symfony.com/doc/current/forms.html) standalone without symfony framework and without pulling its dependencies.
+
+Current dependencies list:
+- symfony/form
+- symfony/templating
+
+##### Contents 
+ 
 Installation
-=====
+-----------
 
-Usage
-=====
-
-Basics
-------
+Basic Usage
+-----------
 Create form:
 ```php
 <?php
