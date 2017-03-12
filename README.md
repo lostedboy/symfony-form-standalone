@@ -39,13 +39,12 @@ $formView = $form->createView()
 
 
 // render form partial
-$templating->render('form.html.php', array('formView' => $formView));
+echo $templating->render('form.html.php', array('form' => $formView));
 ```
 Render form (see: [Symfony Form Rendering](http://symfony.com/doc/current/form/form_customization.html))
 ```php
-<?php
 // form.html.php 
-<?php echo $view['form']->form($formView) ?>
+<?php echo $view['form']->form($form) ?>
 ```
 Render customization
 ------
