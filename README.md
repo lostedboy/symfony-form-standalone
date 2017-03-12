@@ -35,8 +35,7 @@ $formTemplating = new FormTemplating();
 $templating = $formTemplating->getTemplating();
 
 // create form view
-$formView = $form->createView()
-
+$formView = $form->createView();
 
 // render form partial
 echo $templating->render('form.html.php', array('form' => $formView));
