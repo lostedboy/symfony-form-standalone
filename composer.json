@@ -8,6 +8,7 @@
       "homepage": "https://github.com/lostedboy"
     }
   ],
+  "license": "MIT",
   "autoload": {
     "psr-4": {
       "Symfony\\Form\\Standalone\\": "/"
