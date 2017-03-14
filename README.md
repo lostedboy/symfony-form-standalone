@@ -5,8 +5,6 @@ This library allows to use [symfony forms](http://symfony.com/doc/current/forms.
 Current dependencies list:
 - symfony/form
 - symfony/templating
-
-##### Contents 
  
 Installation
 -----------
