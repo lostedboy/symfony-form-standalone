@@ -1,6 +1,7 @@
 {
   "name": "lostedboy/symfony-form-standalone",
   "homepage": "https://github.com/lostedboy/symfony-form-standalone",
+  "description": "Symfony forms wrapper for standalone usage",
   "authors": [
     {
       "name": "Alexander Egurtsov",
