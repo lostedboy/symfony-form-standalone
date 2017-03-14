@@ -10,7 +10,9 @@ Current dependencies list:
  
 Installation
 -----------
-
+```bash
+composer require lostedboy/symfony-form-standalone
+```
 Basic Usage
 -----------
 Create form:
