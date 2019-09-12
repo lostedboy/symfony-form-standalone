@@ -12,7 +12,7 @@
 namespace Symfony\Form\Standalone;
 
 use Symfony\Component\Form\FormExtensionInterface;
-use Symfony\Component\Form\AbstractTypeExtension;
+use Symfony\Component\Form\FormTypeExtensionInterface;
 use Symfony\Component\Form\Forms;
 
 /**
@@ -69,10 +69,10 @@ class FormBuilder
     }
     
     /**
-     * @param AbstractTypeExtension $typeExtension
+     * @param FormTypeExtensionInterface $typeExtension
      * @return $this
      */
-    public function addTypeExtension(AbstractTypeExtension $typeExtension)
+    public function addTypeExtension(FormTypeExtensionInterface $typeExtension)
     {
         $this->getFormFactoryBuilder()->addTypeExtension($typeExtension);
         return $this;
