@@ -30,11 +30,12 @@ class FormBuilder
     /**
      * @param $className
      * @param null $data
+     * @param array $options
      * @return \Symfony\Component\Form\FormInterface
      */
-    public function create($className, $data = null)
+    public function create($className, $data = null, $options = [])
     {
-        return $this->getFormFactory()->create($className, $data);
+        return $this->getFormFactory()->create($className, $data, $options);
     }
 
     /**
